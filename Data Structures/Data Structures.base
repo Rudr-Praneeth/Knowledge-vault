@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.folder.startsWith("Data Structures")
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - '!file.path.contains("Buffer")'
+        - file.ext != "base"
+    sort:
+      - property: file.ctime
+        direction: ASC

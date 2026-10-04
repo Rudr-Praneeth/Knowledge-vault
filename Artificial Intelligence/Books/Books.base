@@ -1,0 +1,6 @@
+filters:
+  and:
+    - file.path.startsWith("Artificial Intelligence/Books/Bases")
+views:
+  - type: table
+    name: Table

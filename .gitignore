@@ -1,0 +1,22 @@
+# Obsidian application files
+.obsidian/
+
+# Private personal journal / planning
+Better Me/
+Templates/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*

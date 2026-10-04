@@ -1,0 +1,9 @@
+filters:
+  and:
+    - file.folder == "Artificial Intelligence/Courses/Bases"
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "Artificial Intelligence/Courses/Bases"

@@ -1,0 +1,10 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "Python/Bases"
+        - file.ext != "base"
+    sort:
+      - property: file.ctime
+        direction: ASC

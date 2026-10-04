@@ -1,0 +1,7 @@
+filters:
+  and:
+    - file.path.startsWith("Web Development")
+views:
+  - type: table
+    name: Table
+    sort: []

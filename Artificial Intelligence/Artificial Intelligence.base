@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.path.startsWith("Artificial Intelligence")
+    - '!file.folder.contains("Buffer")'
+    - file.basename != "Artificial Intelligence"
+    - '!file.folder.contains("Bases")'
+formulas:
+  Untitled: ""
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.basename != "Artificial Intelligence"
+    order:
+      - file.name
+    sort:
+      - property: formula.Untitled
+        direction: ASC
+      - property: file.name
+        direction: ASC

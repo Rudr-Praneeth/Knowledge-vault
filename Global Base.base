@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.ext == "base"
+        - '!file.name.startsWith("Global Base")'
+        - '!file.path.containsAny("Artificial Intelligence/Books", "Artificial Intelligence/Courses")'

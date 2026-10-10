@@ -6,3 +6,7 @@ views:
         - file.ext == "base"
         - '!file.name.startsWith("Global Base")'
         - '!file.path.containsAny("Artificial Intelligence/Books", "Artificial Intelligence/Courses")'
+        - '!file.folder.containsAny("Tests/Web Development", "Tests/Artificial Intelligence", "Tests/Data Structures")'
+    sort:
+      - property: file.ctime
+        direction: ASC

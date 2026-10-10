@@ -50,4 +50,32 @@ Where:
 - $S_n = \sum_{k=0}^{n-1} \frac{1}{a+kd}$
 
 
-## 
+## Exponentiation
+
+## Logarithms
+Logarithms are fundamentally the inverse operation of exponentiation.
+A logarithm asks what exponent/power ``p`` must I put on `base b` to obtain `x`.
+Where `a` is known as `base`, `p` is known as `logarithm/power` and `x` is known as `argument`.
+So Mathematically, 
+$$log_{b} x = p \longleftrightarrow b^p = x$$
+Where the logarithm is only defined when,
+- `b > 0` 
+- `b ≠ 1`
+- `x > 0`
+
+![[Pasted image 20261005170234.png|280]]
+
+Logarithms of numbers when base is not mentioned are interchangeably used with ***Natural Logarithms*** i.e. Logarithms with base e where $e≈2.718281828459…$
+ 
+~={purple} ***Fundamental Logarithmic Values***=~
+ - $log_a​1=0​$
+ - $log_a​a=1​$
+ - $log_a​(a^x)=x​$
+ - $a^{(log_a​x)} = x​$
+
+#### LOGARITHMIC LAWS
+- ~={purple} ***Product Law***=~: $log_a{(xy)} = log_a x + log_a y$
+- ~={purple} ***Quotient Law***=~: $log_a(\frac{x}{y}) = log_a x - log_a y$ 
+- ~={purple} ***Power Law***=~: $log_a x^n = n \times log_a x$
+- ~={purple} ***Root Formula***=~: $log_a \sqrt[n]{x^m} = \frac{m}{n} log_a x$ 
+- ~={purple} ***Change of Base Formulae***=~: 

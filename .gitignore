@@ -1,9 +1,9 @@
 # Obsidian application files
 .obsidian/
 
-# Private personal journal / planning
 Better Me/
 Templates/
+Job Acquisition/
 
 # Operating system files
 .DS_Store

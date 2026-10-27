@@ -2,8 +2,25 @@ filters:
   and:
     - file.folder == "Artificial Intelligence/Courses/Bases"
 views:
+  - type: kanban
+    name: Kanban
+    groupBy:
+      property: file.tags
+      direction: ASC
+    image: file.file
+    imageAspectRatio: 0.45
   - type: table
     name: Table
     filters:
       and:
         - file.folder == "Artificial Intelligence/Courses/Bases"
+    groupBy:
+      property: file.tags
+      direction: ASC
+  - type: cards
+    name: Card
+  - type: list
+    name: List
+    groupBy:
+      property: file.tags
+      direction: ASC

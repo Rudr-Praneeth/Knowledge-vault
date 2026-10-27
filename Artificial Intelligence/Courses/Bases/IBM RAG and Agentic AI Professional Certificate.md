@@ -1,5 +1,5 @@
 # IBM RAG and Agentic AI Professional Certificate
-TAGS: #Artificial_Intelligence #Agentic_Intelligence
+TAGS: #Artificial_Intelligence
 TIME: 101 Hours
 ENABLES: 
 PREREQUSITIES:

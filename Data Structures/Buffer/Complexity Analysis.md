@@ -100,19 +100,37 @@ for i in range(N):
 ```
 [[Complexity Analysis - Loops]]
 
-## Functions & Non-recursive Algorithms
-The time complexity of simple non-recursive functions and algorithms is calculated using the following formulae:
-$\text{Time Complexity} = O(1)_{(\text{One Constant Work})} \times \text{Number of Iterations}$.
->Whenever a loop variable multiplies (or divides) by a constant factor each iteration, the iteration count is O(log n). Whenever it adds/subtracts a constant, iteration count is O(n).
-
 ## Recursion and Recurrence Relations
+A recursive function is a function which calls itself to solve a complex problem by reducing it into simpler smaller problems by delegating a part of work to a recursive call. 
+Every recursive function contains two things:
+- ~={purple}Base Case=~: The base case is a condition for which the function returns an answer directly, without making another recursive call.
+- ~={purple}Recursive Case=~: The recursive case reduces the current problem and delegates part of the work to a recursive call.
+A call frame conceptually stores the information needed for one active function call: its parameters, local variables, and where execution should resume. Each recursive call adds a frame. When that call returns, its frame is removed.
+The stack is last in, first out (LIFO): the most recent call must finish before the earlier call can continue.
+
 A recursive algorithm's time complexity is calculated by representing it as a recurrence relation. 
-~={purple}Recurrence Relation=~: An equation for T(n) (time for input size n) in terms of T smaller inputs, then solve that recurrence to get a closed form.
+~={purple}Recurrence Relation=~: A recurrence relation describes the running time of a recursive algorithm in terms of the running time of smaller inputs.
 Every recursive function does two kinds of work per call:
 - Some amount of local work (before/after/between the recursive calls) - f(n).
 - One or more recursive calls on smaller subproblems.
 So the general shape is:
-$$T(n) = (\text{number of recursive calls})\times T(\text{size of subproblem}) + f(n)$$
+$$T(n) = a^j\times T(\frac n {b^j}) + f(n)$$
+Where:
+$a^j$: Number of recursive calls
+$\frac n {b^j}$: Size of subproblem 
+`n`: Input size
+`f(n)`: Non-recursive work
+Total non-recursive work at that level: $a^j f\left(\frac{n}{b^j}\right)$
+
+> The auxiliary call-stack space complexity is given by the number of active calls at the deepest point.
+> The depth is approximately $\log_b n$. The number of leaves is approximately $a^{\log_b n}=n^{\log_b a}$.
+
+#### Python Specific Recursion Realities
+- Python uses a recursion limit, commonly around 1,000 calls by default, though the actual setting and environment can vary.
+- Deep recursion can raise `RecursionError`, even when the algorithm is logically correct.
+- Each active call consumes stack-related memory.
+- Memoization can remove repeated computation, but it does not necessarily reduce recursion depth.
+- An iterative implementation may avoid recursion-stack costs.
 
 ---
 # Time Complexity Estimation b/o Constraints 

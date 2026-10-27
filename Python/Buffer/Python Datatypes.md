@@ -10,6 +10,8 @@ Python supports multiple types of values/data. All the data in python are a runt
 The datatypes supported in Python are:
 - [[Numbers]]
 - [[Strings]]
+- [[Booleans]]
+- [[None]]
 
 
 

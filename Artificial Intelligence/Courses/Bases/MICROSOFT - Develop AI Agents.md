@@ -1,5 +1,5 @@
 # Develop AI Agents on Azure
-TAGS: #Artificial_Intelligence 
+TAGS: #Agentic_Intelligence 
 TIME: 9hr 41min
 MODULES: 9
 

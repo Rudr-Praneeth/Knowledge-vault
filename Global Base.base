@@ -10,3 +10,5 @@ views:
     sort:
       - property: file.ctime
         direction: ASC
+  - type: kanban
+    name: View

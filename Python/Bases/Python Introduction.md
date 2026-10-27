@@ -112,7 +112,7 @@ Projects can have different:
 - The exact mechanism of Python resolution varies by OS and shell.
 
 #### PYTHON ENVIRONMENT
-A virtual environment is an isolated Python environment associated with a particular Python interpreter, with its own environment-specific packages and executable setup. Activation does not create the environment. It changes which **environment's tools your shell resolves by default**.
+A virtual environment is an isolated Python environment associated with a particular Python interpreter, with its own environment-specific packages and executable setup. Activation changes which **environment's tools your shell resolves by default**.
 ~={purple}CREATION=~: `python -m env <ENVIRONMENT_NAME>`
 ~={purple}ACTIVATION=~: 
 - Windows: `source ENVIRONMENT_NAME/Scripts/activate` 

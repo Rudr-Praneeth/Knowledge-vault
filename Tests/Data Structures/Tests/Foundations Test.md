@@ -341,7 +341,7 @@ while i > 1:
 Determine the tight asymptotic complexity.
 ***SOLUTION***:
 Step 1: Fix one outer-loop iteration
-Suppose the current value of `i` is mmm.
+Suppose the current value of `i` is m.
 The `j` loop visits powers of two:
 $1,2,4,8,\ldots <m$.
 There are $\Theta(\log m)$ such values.
@@ -416,7 +416,7 @@ Sequential phases add, so $O(n^2)+O(n^2)=O(n^2)$, not $O(n^4)$. A nested operati
 ## RESULTS
 | Problem                              | Verdict                 | Evaluation                                                                                                                                                                      |
 | ------------------------------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Bound classification              | Mostly correct          | All six truth values are correct. The proof for statement 2, however, reverses the inequality being tested.                                                                     |
+| 1. Bound classification              | Correct                 | All six truth values are correct along with proofs.                                                                                                                             |
 | 2. Formal Big-O proof                | Correct                 | Your \(c=25,\ n_0=1\) bound works. The proof is valid for all \(n\ge1\), not merely \(n>1\).                                                                                    |
 | 3. Disprove \(\Theta(n^3)\)          | Correct                 | Both the upper-bound proof and the lower-bound contradiction are sound.                                                                                                         |
 | 4. \(T(n)=f(n)+O(n^3)\)              | Correct                 | Excellent distinction between an upper bound and a tight bound. Your examples establish why \(\Theta(n^3)\) cannot be concluded.                                                |
@@ -436,12 +436,12 @@ Sequential phases add, so $O(n^2)+O(n^2)=O(n^2)$, not $O(n^4)$. A nested operati
 | 18. Combining upper bounds           | Correct conclusions     | Your classifications are correct. The proof for statement 1 is a little too casual when it says to ignore lower-order terms, but the conclusion follows from the formal bounds. |
 | 19. Sequential vs nested costs       | Correct                 | Correct rule and correct explanation of when multiplication may arise.                                                                                                          |
 
-|Assessment dimension|Score|Judgment|
-|---|---|---|
-|Conceptual understanding|9/10|Strong distinction between upper and tight bounds|
-|Intuition|9/10|Good understanding of dominant terms and loop behavior|
-|Pattern recognition|9/10|Correctly identified geometric, harmonic, and logarithmic sums|
-|Mathematical reasoning|8/10|One proof uses the wrong inequality; a couple of arguments need tighter justification|
-|Correctness|9/10|Conclusions are overwhelmingly correct|
-|Complexity analysis|9/10|Strong performance on the mixed loop problems|
-|Explanation and communication|8/10|Generally clear, but some statements claim more than the displayed proof establishes|
+| Assessment dimension          | Score | Judgment                                                                             |
+| ----------------------------- | ----- | ------------------------------------------------------------------------------------ |
+| Conceptual understanding      | 9/10  | Strong distinction between upper and tight bounds                                    |
+| Intuition                     | 9/10  | Good understanding of dominant terms and loop behavior                               |
+| Pattern recognition           | 9/10  | Correctly identified geometric, harmonic, and logarithmic sums                       |
+| Mathematical reasoning        | 9/10  | A couple of arguments need tighter justification                                     |
+| Correctness                   | 9/10  | Conclusions are overwhelmingly correct                                               |
+| Complexity analysis           | 9/10  | Strong performance on the mixed loop problems                                        |
+| Explanation and communication | 8/10  | Generally clear, but some statements claim more than the displayed proof establishes |

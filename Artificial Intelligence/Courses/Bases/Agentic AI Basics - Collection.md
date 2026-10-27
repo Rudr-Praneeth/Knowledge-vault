@@ -1,5 +1,5 @@
 
-TAGS: #Artificial_Intelligence #Agentic_Intelligence 
+TAGS: #Agentic_Intelligence 
 BUILT-ON: 
 ENABLES: 
 PREREQUSITIES:

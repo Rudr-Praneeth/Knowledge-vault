@@ -239,3 +239,4 @@ A debugger gives you tools to observe execution:
 	CPython uses bytecode as an intermediate representation between Python source code and native machine instructions. This separates Python’s language semantics from the underlying CPU architecture, allowing the same Python program to be executed by CPython implementations targeting different platforms.
 
 [^5]: An Abstract Syntax Tree (AST) is a structural representation of the source code. It is used to represent the structure and relations in the Source code.
+

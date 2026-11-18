@@ -1,0 +1,16 @@
+views:
+  - type: kanban
+    name: Kanban
+    filters:
+      and:
+        - file.folder.startsWith("JavaScript")
+        - file.ext != "base"
+    groupBy:
+      property: file.folder
+      direction: ASC
+  - type: table
+    name: View
+    filters:
+      and:
+        - file.folder.startsWith("JavaScript")
+        - file.ext != "base"

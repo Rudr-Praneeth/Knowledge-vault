@@ -1,16 +1,17 @@
-# Control Flow
+x`z# Control Flow
 TAGS: #Python 
 BUILT-ON: [[Python Fundamentals]]
 ENABLES: - 
 PREREQUSITIES: - 
 
 ---
-## Control Flow
+# Control Flow
 Control flow is the order in which a program's statements are executed. There are multiple ways of controlling the flow of a program. Some of these ways are as follows:
  - Conditional Statements
  - Loops
 
 ## Conditional Statements
+#### Conditional Statements
 Conditional Statements allow the control of flow of a program to depend on a condition. 
 A condition determines which block executes at that decision point. A condition is made up of a Boolean value, a Boolean expression or multiple Boolean expressions combined using combining conditions: `and`, `or`, `not`. 
 >Python permits mathematical-looking comparisons `Start <= Variable <= End`
@@ -22,7 +23,7 @@ elif CONDITION:
 else:
 	FALLBACK_WORK()
 ```
-Python evaluates a conditional chain from top to bottom and executes at most one branch in that chain python executes the first successful branch. Else block acts as an optional fallback block of code when no preceding chain  .
+Python evaluates a conditional chain from top to bottom and executes at most one branch in that chain i.e. python executes the first successful branch. Else block acts as an optional fallback block of code when no preceding chain executes.
 Use an `if-elif` chain when you want to select one alternative from several. 
 For independent `if` statements python evaluates **every** condition regardless of what happened before and is used when several actions may need to happen.
 
@@ -53,19 +54,10 @@ A nested conditional is a conditional inside the body of another conditional. It
 ~={purple}***Guard Conditions***=~: 
 A guard checks a prerequisite first and rejects early, keeping the main path at the same indentation level.
 
-~={purple}***Systematic Method***=~: 
-1. **Identify inputs:** values determining the outcome
-2. **Define valid inputs and prerequisites**.
-3. **Identify mutually exclusive outcomes.** 
-4. **Choose a structure:** independent `if`, chain, nesting, combined expression, guards.
-5. **Check boundaries and overlaps:** below, at, above thresholds; all, one, none of the logical conditions. 
-6. **Trace the execution path:** which conditions are evaluated, skipped, executed. 
-7. **Review readability:** remove unnecessary conditions, deep nesting, ambiguous grouping.
-
 #### Match Statement
 Provides a structured way to choose an action based on the value or structure of data, particularly useful when multiple alternatives need to be handled clearly.
+Python executes the body of the first matching case.
 - Each `case` defines a pattern to try matching against that value.
-- Python executes the body of the first matching case.
 - `case _` is the wildcard fallback: it matches any value that reaches it.
 - Single case can match several alternatives using `|` (OR pattern).
 ```python
@@ -99,7 +91,7 @@ match match_variable:
 		#BLOCK
 	case case_variable:                        
 		#BINDS CASE_VARIABLE NAME TO MATCH_VARIABLE OBJECT
-		print(case_variable)                  #PRINTS MATCH_VARIABLE
+		print(case_variable)                  #PRINTS MATCH_VARIABLE OBJECT
 ```
 
 ~={purple}***Sequence Patterns***=~:

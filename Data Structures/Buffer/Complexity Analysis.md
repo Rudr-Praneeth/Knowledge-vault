@@ -5,7 +5,7 @@ ENABLES: -
 PREREQUSITIES: - 
 
 ---
-## Complexity Analysis
+# Complexity Analysis
 Runtime depends on things such as:
 - CPU
 - Memory
@@ -107,7 +107,6 @@ Every recursive function contains two things:
 - ~={purple}Recursive Case=~: The recursive case reduces the current problem and delegates part of the work to a recursive call.
 A call frame conceptually stores the information needed for one active function call: its parameters, local variables, and where execution should resume. Each recursive call adds a frame. When that call returns, its frame is removed.
 The stack is last in, first out (LIFO): the most recent call must finish before the earlier call can continue.
-
 A recursive algorithm's time complexity is calculated by representing it as a recurrence relation. 
 ~={purple}Recurrence Relation=~: A recurrence relation describes the running time of a recursive algorithm in terms of the running time of smaller inputs.
 Every recursive function does two kinds of work per call:
@@ -125,12 +124,50 @@ Total non-recursive work at that level: $a^j f\left(\frac{n}{b^j}\right)$
 > The auxiliary call-stack space complexity is given by the number of active calls at the deepest point.
 > The depth is approximately $\log_b n$. The number of leaves is approximately $a^{\log_b n}=n^{\log_b a}$.
 
-#### Python Specific Recursion Realities
-- Python uses a recursion limit, commonly around 1,000 calls by default, though the actual setting and environment can vary.
-- Deep recursion can raise `RecursionError`, even when the algorithm is logically correct.
-- Each active call consumes stack-related memory.
-- Memoization can remove repeated computation, but it does not necessarily reduce recursion depth.
-- An iterative implementation may avoid recursion-stack costs.
+#### Python Specific Recursion Notes
+- Python uses a recursion limit, commonly around 1,000 calls by default, though the actual setting and environment can vary. Deep recursion can raise `RecursionError`, even when the algorithm is logically correct. This can be set using the `sys` standard library in Python but Setting it too high can cause a stack overflow or crash Python.
+  ```python
+  import sys
+  
+  sys.getrecursionlimit()
+  sys.setrecursionlimit(INTEGER)
+  ```
+- Each active call consumes stack-related memory. Memoization can remove repeated computation, but it does not necessarily reduce recursion depth. An iterative implementation may avoid recursion-stack costs.
+
+## Space Complexity
+Space complexity measures how memory consumption grows as the input size grows.
+~={purple}**Total Space**=~: Total space considers the memory occupied by the input, the output, and the additional memory required while the algorithm executes.
+Memory used by an algorithm:
+1. ***Input space***
+   Memory occupied by the data supplied to the algorithm.
+2. ***Auxiliary space***
+   Additional working memory created or used by the algorithm, excluding the input and usually excluding the returned output.
+3. ***Output space***
+   Memory required to store the result produced by the algorithm.
+$\boxed{ \text{Total Space} = \text{Input Space} + \text{Auxiliary Space} + \text{Output Space} }$
+
+This is the space-time tradeoff:
+- Sometimes we use more memory to improve speed.
+- Sometimes we use more computation to reduce memory.
+- The right decision depends on constraints.
+A call frame (also called a stack frame) is a block of memory associated with an individual function call.
+It typically stores information such as:
+- Function arguments and parameters.
+- Local variables
+- Return address or information about where execution should resume
+- Saved execution state and other bookkeeping information
+Call frames are stored on a memory structure called the call stack.
+When a function is called, a new call frame is pushed onto the stack. When that function returns, its call frame is popped from the stack. Each recursive call creates a new call frame because the program must preserve the information needed to resume the previous function call after the recursive call returns.
+Therefore, recursion consumes stack memory.
+Sequential recursive calls made by the same function generally do not coexist as active child calls on the stack if the first call must return before the second call begins. However, the parent function's call frame remains active while waiting for each recursive call to complete. Therefore, although two sequential child calls do not overlap, their parent call and the currently executing child call do coexist on the stack. In branching recursion, multiple recursive calls are generally executed sequentially, but the parent call remains active until all required recursive calls have returned.
+
+## Amortised Analysis
+Amortized analysis is a method of analysing the average cost per operation over a sequence of operations in the worst-case sequence of operations. It guarantees that the total cost of a sequence of `m` operations is bounded, even if some individual operations are expensive.
+More precisely, if a sequence of \(m\) operations has total cost \(T(m)\), then its amortized cost per operation is bounded by: $\frac{T(m)}{m}$. 
+**Worst-case**; Maximum time a single operation can take.
+**Average-case**: Expected time for an operation across possible inputs, based on an assumed input distribution.
+**Amortized**: Average cost per operation over a sequence of operations, including occasional expensive operations.
+
 
 ---
 # Time Complexity Estimation b/o Constraints 
@@ -151,11 +188,8 @@ We check g(n) for $n= C_2$ , i.e. $g(C_2)$.
 
 
 
-
+# END
 ---
-
-
-
 #### FOOTNOTES
 [^1]: A **growth function** is a mathematical function g(n) that describes how the amount of computational resource used by an algorithm grows as a function of input size n.
 

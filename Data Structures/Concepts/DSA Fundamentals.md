@@ -39,6 +39,3 @@ Basic Steps for efficient logic building:
 ---
 #### FOOTNOTES
 
-
-
-Python is a general-purpose, high-level programming language that can be used to build software ranging from small scripts to large systems.

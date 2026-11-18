@@ -305,7 +305,7 @@ $T(n) = T(n-k) + 4n + 4(n-1) + 4(n-2)$
 $T(n) = T(1) + 4*(n+ (n-1) + (n-2) + \dots + (2))$
 $T(n) = 1 + 4(2 + \dots + n-1 + n)$
 $T(n) = 1 + 4((n^2/2 + n/2)-1)$
-$T(n) = 2n^2 + 2n - 3$
+$T(n) = 2n^2 + 2n - 3$ 
 $T(n) = \Theta(n^2)$
 There are $\Theta(n)$ recursive calls, but each call performs a different amount of work. The total work is $T(n) = \Theta(n^2)$.
 
@@ -485,12 +485,12 @@ def s(n):
 5. Explain why the number of calls made by one function invocation is not the same as the total number of calls in the entire execution.
 
 ***Solution***:
-1. Running-time recurrence:  $T(n)=nT(\lfloor n/2\rfloor)+\Theta(1)$
+1. Running-time recurrence:  $T(n)=nT(\lfloor n/2\rfloor)+\Theta(n)$
    Each invocation makes n recursive calls, each with input size $\lfloor n/2\rfloor$.
 2. Why it differs from Questions 6 and 8:
 	- Question 6: One recursive call, halving the input: $T(n)=T(n/2)+\Theta(1)$.
 	- Question 8: Two recursive calls, halving the input: $T(n)=2T(n/2)+\Theta(1)$.
-	- Question 18: \(n\) recursive calls, halving the input: $T(n)=nT(n/2)+\Theta(1)$.
+	- Question 18: \(n\) recursive calls, halving the input: $T(n)=nT(n/2)+\Theta(n)$.
 3. Tight time complexity:  $\boxed{T(n)=2^{\Theta((\log n)^2)}}$  
    At level i, there are approximately $n^{\,i}/2^{i(i-1)/2}$ calls. The recursion depth is $\Theta(\log n)$, and multiplying the branching factors across levels gives  $\prod_{i=0}^{\Theta(\log n)-1}\frac{n}{2^i}=2^{\Theta((\log n)^2)}$.
    The loop's total work is dominated by the recursive calls.
@@ -601,7 +601,7 @@ Do not infer the answer solely from the number of recursive calls.
    $T(n)=T(n/2)+T(n/4)+cn$
    $T(n)=T(n/4)+T(n/8)+cn/2+T(n/8)+T(n/16)+cn/4+cn$
    $T(n)=T(n/4)+2T(n/8)+T(n/16)+c(n+n/2+n/4)$.
-   $T(n)=T(n/8)+3T(n/16)+3T(n/32)+T(n/64)+cn(2+1/4+1/16)$.
+   $T(n)=T(n/8)+3T(n/16)+3T(n/32)+T(n/64)+cn(1 + 1/2 +3/4+1/16)$.
 3. Work outside recursive calls:
    Each invocation performs $\Theta(n)$ work in its loop. A subproblem of size m generates subproblems of sizes m/2 and m/4. Their combined size is 3m/4. Thus, the total work across successive levels decreases geometrically, apart from constant-cost base cases.
 4. Tight time complexity:  $\boxed{\Theta(n)}$

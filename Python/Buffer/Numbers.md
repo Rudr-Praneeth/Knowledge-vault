@@ -51,10 +51,6 @@ Python follows the following operator precedence when multiple operators are use
 	  `xey` for example `1e3` means $x \times 10^y$ 
 
 ---
-#### SUMMARY
-
-
----
 #### FOOTNOTES
 
 [^1]: Floor Operation

@@ -3,20 +3,14 @@ TAGS: #Artificial_Intelligence
 BUILT-ON: [[IBM Generative AI Fundamentals Specialization]]
 
 ---
-## Generative AI Introduction and Applications
-This video introduces the concept of generative AI, its evolution, and how it differs from discriminative AI, providing foundational knowledge about AI models and their applications.
-Fundamentals of AI and Discriminative AI
-- Artificial Intelligence (AI) simulates human intelligence through machines that learn from large datasets, a process called training.
-- Discriminative AI models classify data by learning to distinguish between different classes using labeled training data, such as spam filters that identify spam versus non-spam emails.
+## Artificial Intelligence
+Artificial Intelligence stimulates human intelligence using machines.
+Artificial Intelligence can be classified into 2 categories:
+- ***Discriminative AI***: AI that classifies data by distinguishing between data classes. 
+  Tasks such as:
+	- 
+- ***Generative AI***: AI that generates novel data based on the existing data.
 
-Generative AI and Its Capabilities
-- Generative AI models generate new content by learning the underlying distribution of training data, producing novel outputs like text, images, audio, video, code, or data.
-- These models start with a prompt (text, image, video, etc.) and can generate content in the same or different formats, enabling creative tasks beyond classification.
-
-Comparison and Examples
-- Discriminative AI excels at analytical and predictive tasks, such as classifying images or emails.
-- Generative AI mimics creative skills, capable of creating new content, for example, drawing an image based on a textual description.
-- This distinction highlights generative AI’s role in enhancing creativity alongside traditional AI’s analytical strengths.
 
 Core Models and Techniques in Generative AI
 - Generative AI relies on deep learning and artificial neural networks, which are inspired by the human brain’s structure.

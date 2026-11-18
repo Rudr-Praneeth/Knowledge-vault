@@ -56,13 +56,13 @@ Chapters:
 - [x] Lists
 - [x] Tuples
 - [x] Dictionaries
-- [ ] Sets
-- [ ] Strings as sequences
-- [ ] Indexing
-- [ ] Slicing
-- [ ] Iteration
-- [ ] Nested structures
-- [ ] Hashing
+- [x] Sets
+- [x] Strings as sequences
+- [x] Indexing
+- [x] Slicing
+- [x] Iteration
+- [x] Nested structures
+- [x] Hashing
 - [ ] Membership testing
 - [ ] Copying
 - [ ] Shallow vs deep copy
